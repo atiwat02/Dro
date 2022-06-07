@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start"[routerLink]="['/record']">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-undo-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>เพิ่มข้อมูล</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="img" plceholder="img" type="text">img : </ion-input>
+      <ion-icon name="folder-outline"></ion-icon>
+    </ion-item>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="name" plceholder="name" type="text">ชื่อ-สกุล : </ion-input>
+    </ion-item>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="parcel_number" plceholder="parcel_number" type="text">เลขพัสดุ : </ion-input>
+    </ion-item>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="room_number" plceholder="room_number" type="text">เลขห้อง : </ion-input>
+    </ion-item>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="company" plceholder="company" type="text">บริษัทขนส่ง : </ion-input>
+    </ion-item>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="recipient" plceholder="recipient" type="text">ผู้รับ : </ion-input>
+    </ion-item>
+    <ion-item lines='none'>
+      <ion-input [(ngModel)]="Username" plceholder="Username" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <div class="ion-text-center">
+    <ion-button color="secondary" (click)="Create()">เพิ่มพัสดุ</ion-button>
+  </div>
+
+</ion-content>

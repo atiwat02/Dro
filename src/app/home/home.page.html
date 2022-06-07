@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-item lines="none" color="primary" class="ion-text-center">
+    รายการพัสดุหอพัก
+  </ion-item>
+
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+ <div>
+  <ion-toolbar>
+    <ion-searchbar debounce="200" (ionInput)="parcelall($event)"></ion-searchbar>
+  </ion-toolbar>
+  
+  <ion-list *ngFor="let item of parcelall ">
+    <ion-item >
+      <ion-label>{{item.name}}</ion-label>
+      <ion-label>{{item.note}}</ion-label>
+      <ion-button color="secondary"(click)="parcel(item)">></ion-button>
+    </ion-item>
+  </ion-list>
+
+  
+</div> 
+</ion-content >
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="speakers"[routerLink]="['/home']">
+   <ion-icon name="home-sharp"></ion-icon>
+   <ion-label></ion-label>
+ </ion-tab-button>
+<ion-tab-button tab="speakers"[routerLink]="['/statistics']">
+  <ion-icon name="stats-chart-sharp"></ion-icon>
+   <ion-label>สถิติ</ion-label>
+ </ion-tab-button> 
+ <ion-tab-button tab="speakers"[routerLink]="['/adddata']">
+   <ion-icon name="person-circle"></ion-icon>
+   <ion-label>ข้อมูล</ion-label>
+ </ion-tab-button> 
+ 
+</ion-tab-bar>
+
+
+
+
+

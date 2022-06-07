@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">รายการ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of parcelall ">
+    <ion-item>
+      <ion-label>{{item.name}}</ion-label>
+      <ion-label>{{item.room_number}}</ion-label>
+      <ion-button color="secondary" (click)="parcel(item)">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+
+
+  <div class="ion-text-center">
+    <ion-button color="secondary" (click)="Create()">เพิ่มพัสดุ</ion-button>
+  </div>
+
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button>
+    <ion-icon name="home-sharp"></ion-icon>
+    <ion-label></ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="schedule" [routerLink]="['/createuser']">
+    <ion-icon name="person-circle"></ion-icon>
+    <ion-label>เพิ่มuser</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="speakers" [routerLink]="['/statistics']">
+    <ion-icon name="stats-chart-sharp"></ion-icon>
+    <ion-label>สถิติ</ion-label>
+  </ion-tab-button>
+
+
+</ion-tab-bar>

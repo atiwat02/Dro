@@ -1,0 +1,32 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
+<ion-header class="ion-no-border">
+  <ion-item lines="none" color="primary">
+    <ion-avatar slot="start">
+    </ion-avatar>
+    <ion-label class="ion-text-center">
+        <h1> Login  </h1>
+      </ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+      <ion-item lines='none'>
+        <ion-icon name="person-sharp"></ion-icon>
+        <ion-input [(ngModel)]="Username" plceholder ="Username" type="text"></ion-input>
+      </ion-item>
+      <ion-item transparent>
+        <ion-icon name="lock-closed-sharp"></ion-icon>
+        <ion-input [(ngModel)]="Password" plceholder ="Password" type="Password"></ion-input>
+      </ion-item>
+        <ion-label class="forget-password">Forget Password</ion-label>
+  
+        <div class="ion-text-center">
+          <ion-button color="primary" (click)="LoginOTP()">LOGIN</ion-button>
+        </div>
+        
+        
+
+</ion-content>

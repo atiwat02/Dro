@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-undo-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>รายละเอียดพัสดุ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-slides  #slider pager="true" [options]="slideOpts" (ionSlideDidChange)='ionSlideDidChange()'>
+    <ion-slide >
+      <img src="{{this.image01}}">
+    </ion-slide>
+ </ion-slides>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-label>ชื่อ-สกุล : {{name}}</ion-label><br /><br />
+      <ion-label>เลขห้อง : {{room_number}}</ion-label><br /><br />
+      <ion-label>หมายเลขพัสดุ : {{parcel_number}}</ion-label><br /><br />
+      <ion-label>บริษัทขนส่ง : {{company}}</ion-label><br /><br />
+      <ion-label>เวลารับเข้า : {{Day}}</ion-label><br /><br />
+      <ion-label>ผู้รับเข้าพัสดุ : {{recipient}}</ion-label><br /><br />
+
+    </ion-card-header>
+    
+    <div class="ion-text-center">
+      <ion-button color="secondary" (click)="Create()">ตรวจสอบ</ion-button>
+    </div>
+
+  </ion-card>
+
+
+</ion-content>
