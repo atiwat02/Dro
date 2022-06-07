@@ -48,10 +48,10 @@ export class PadPage implements OnInit,AfterViewInit {
     }
     const blob = new Blob([int8Array], { type: 'image/png' });
     const url = window.URL.createObjectURL(blob);
-    saveAs(url, "ddddddd"+'.png');
+    saveAs(url, "dd"+'.png');
 
     // window.open(url);
-    return blob;
+    return blob;  
   }
 
   save(): void {
